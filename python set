@@ -1,0 +1,27 @@
+# Function to get the set of integers from the user
+def get_integer_set():
+    integer_set = set()
+    while True:
+        try:
+            user_input = input("Enter an integer (or type 'done' when finished): ")
+            if user_input.lower() == 'done':
+                break
+            else:
+                integer_set.add(int(user_input))
+        except ValueError:
+            print("Please enter a valid integer or type 'done' to finish.")
+    return integer_set
+
+# Main program
+def main():
+    set1 = get_integer_set()
+    set2 = get_integer_set()
+    
+    common_elements = set1.intersection(set2)
+    
+    print("Set 1:", set1)
+    print("Set 2:", set2)
+    print("Common Elements:", common_elements)
+
+if __name__ == "__main__":
+    main()
