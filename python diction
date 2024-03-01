@@ -1,0 +1,15 @@
+# Function to get information about a person and store it in a dictionary
+def get_person_info():
+    person_info = {}
+    person_info['name'] = input("Enter your name: ")
+    person_info['age'] = int(input("Enter your age: "))
+    person_info['favorite_color'] = input("Enter your favorite color: ")
+    return person_info
+
+# Main program
+def main():
+    person_info = get_person_info()
+    print("Person information:", person_info)
+
+if __name__ == "__main__":
+    main()
