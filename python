@@ -1,0 +1,26 @@
+# Function to get the list of integers from the user
+def get_integer_list():
+    integer_list = []
+    while True:
+        try:
+            user_input = input("Enter an integer (or type 'done' when finished): ")
+            if user_input.lower() == 'done':
+                break
+            else:
+                integer_list.append(int(user_input))
+        except ValueError:
+            print("Please enter a valid integer or type 'done' to finish.")
+    return integer_list
+
+# Function to calculate the sum of all the integers in the list
+def calculate_sum(integer_list):
+    return sum(integer_list)
+
+# Main program
+def main():
+    integer_list = get_integer_list()
+    sum_of_integers = calculate_sum(integer_list)
+    print("Sum of integers:", sum_of_integers)
+
+if __name__ == "__main__":
+    main()
